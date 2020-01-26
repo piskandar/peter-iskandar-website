@@ -1,0 +1,60 @@
+.role-experience {
+  margin-bottom: 22px;
+  .divider-wrapper-right {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 22px;
+
+    .divider {
+      width: 36px;
+      height: 5px;
+      background-color: #F7931E;
+      border-radius: 2px;
+    }
+  }
+  .title{
+    font-size: 12px;
+    text-align: left;
+    line-height: 17px;
+    letter-spacing: 1px;
+    font-family: montserrat, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .business-unit{
+    text-align: left;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .dates {
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    color: #9696A0;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .description {
+    font-size: 18px;
+    text-align: left;
+    line-height: 25px;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    color: #586464;
+    margin: 0;
+  }
+
+  .divider {
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+  }
+}

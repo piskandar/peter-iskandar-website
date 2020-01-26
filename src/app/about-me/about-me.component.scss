@@ -1,0 +1,100 @@
+.about-me {
+  width: 960px;
+  background: red;
+  display: flex;
+  margin: 0 auto 130px;
+
+  .left-section {
+    background-color: white;
+    width: 50%;
+  }
+  .right-section {
+    background-color: white;
+    width: 50%;
+  }
+
+  .keywords{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .content {
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #000000;
+      font-family: montserrat, sans-serif;
+      font-weight: 500;
+      line-height: 22px;
+      border-left: 3px solid #F7931E;
+      padding-left: 14px;
+      margin-left: 72px;
+    }
+  }
+  .main-header {
+    //margin-top: 146px;
+    line-height: 60px;
+    text-align: right;
+    font-size: 68px;
+    color: #000000;
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+
+    .header-text {
+      margin: 0;
+    }
+  }
+
+  .divider-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 22px;
+
+    .divider {
+      width: 36px;
+      height: 5px;
+      background-color: #F7931E;
+      border-radius: 2px;
+    }
+  }
+
+  .divider-wrapper-right {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 22px;
+
+    .divider {
+      width: 36px;
+      height: 5px;
+      background-color: #F7931E;
+      border-radius: 2px;
+    }
+  }
+
+  .skill-wrapper {
+    padding-top: 44px;
+    .skill-section {
+      margin-bottom: 22px;
+      width: 50%;
+      padding-left: 50%;
+
+      .sub-header {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #000000;
+        font-family: montserrat, sans-serif;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase;
+        text-align: right;
+      }
+
+      .skill-body {
+        font-size: 18px;
+        text-align: right;
+        font-family: montserrat, sans-serif;
+        font-weight: 400;
+        color: #586464;
+      }
+    }
+  }
+}

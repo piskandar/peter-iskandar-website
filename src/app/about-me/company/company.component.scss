@@ -1,0 +1,30 @@
+.company {
+  padding-top: 44px;
+  .company-name {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #000000;
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .date-range, .location {
+    text-align: left;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+  }
+
+}

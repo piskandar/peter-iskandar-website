@@ -1,0 +1,13 @@
+<div class="role-experience">
+  <div class="title">{{roleTitle}}</div>
+  <div class="business-unit">{{businessUnit}}</div>
+  <div class="dates">{{startDate}} - {{endDate}}</div>
+  <div  *ngIf="description && description.length > 0" class="divider">-</div>
+  <ul *ngIf="description && description.length > 0" class="description">
+    <li *ngFor="let point of description">{{point}}</li>
+  </ul>
+  <div class="divider-wrapper-right">
+    <div class="divider">
+    </div>
+  </div>
+</div>

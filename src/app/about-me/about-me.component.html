@@ -1,0 +1,95 @@
+<div class="about-me">
+  <div class="left-section">
+    <div class="main-header">
+      <p class="header-text">Technical<br/>Skills</p>
+    </div>
+    <div class="divider-wrapper">
+      <div class="divider">
+      </div>
+    </div>
+    <div class="skill-wrapper">
+      <div class="skill-section">
+        <div class="sub-header">Languages</div>
+        <div class="skill-body">Java, C#, Kotlin, UNIX Shell Scripting, Objective-C, Swift, C++, Ruby</div>
+      </div>
+      <div class="skill-section">
+        <div class="sub-header">Web</div>
+        <div class="skill-body">Angular, React, CSS/Sass, Spring Framework</div>
+      </div>
+      <div class="skill-section">
+        <div class="sub-header">Mobile</div>
+        <div class="skill-body">Android, iOS</div>
+      </div>
+      <div class="skill-section">
+        <div class="sub-header">graphics</div>
+        <div class="skill-body">Adobe Photoshop, Sketch</div>
+      </div>
+      <div class="skill-section">
+        <div class="sub-header">CONTINUOUS <br/>INTEGRATIONS</div>
+        <div class="skill-body">Concourse, CircleCI, BuildKite, Jenkins</div>
+      </div>
+      <div class="skill-section">
+        <div class="sub-header">Cloud <br/>Technologies</div>
+        <div class="skill-body">Cloud Foundry, GCP, AWS, Azure</div>
+      </div>
+      <div class="skill-section">
+        <div class="sub-header">METHODOLOGIES</div>
+        <div class="skill-body">Agile, Extreme Programming, Pair Programming</div>
+      </div>
+    </div>
+  </div>
+  <div class="right-section">
+    <div class="keywords">
+
+      <div class="content">
+        <div>CREATIVE</div>
+        <div>ARTISTIC</div>
+        <div>INNOVATED</div>
+        <div>SELF MOTIVATED</div>
+        <div>TEAM LEADER</div>
+        <div>STRONG ANALYTICAL</div>
+        <div>QUICK LEARNER</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<div class="about-me">
+  <div class="left-section">
+  </div>
+  <div class="right-section">
+    <div class="main-header">
+      <p class="header-text" style="text-align: left">work<br/>experience</p>
+    </div>
+    <div class="divider-wrapper-right">
+      <div class="divider">
+      </div>
+    </div>
+    <div>
+
+      <app-company [company]="'Pivotal'"
+                   [startDate]="'FEBRUARY 2011'"
+                   [endDate]="'PRESENT'"
+                   [location]="'Toronto, ON'"></app-company>
+      <app-role-work-experience *ngFor="let roleExperience of workExperience1"
+                                [roleTitle]="roleExperience.roleTitle"
+                                [businessUnit]="roleExperience.businessUnit"
+                                [startDate]="roleExperience.startDate"
+                                [endDate]="roleExperience.endDate"
+                                [description]="roleExperience.description"></app-role-work-experience>
+      <app-company [company]="'TELUS Health Solutions'"
+                   [startDate]="'JUNE 2008'"
+                   [endDate]="'FEBRUARY 2011'"
+                   [location]="'MISSISSAUGA, ON'"></app-company>
+      <app-role-work-experience *ngFor="let roleExperience of workExperience2"
+                                [roleTitle]="roleExperience.roleTitle"
+                                [businessUnit]="roleExperience.businessUnit"
+                                [startDate]="roleExperience.startDate"
+                                [endDate]="roleExperience.endDate"
+                                [description]="roleExperience.description"></app-role-work-experience>
+
+    </div>
+  </div>
+</div>
