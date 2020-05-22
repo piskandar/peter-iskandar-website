@@ -1,0 +1,12 @@
+<app-header [showCode]="false" [pageTitle]="'Code'"></app-header>
+
+<div style="width: 1024px; margin: 0 auto">
+  <div *ngFor="let post of posts" >
+    <div>{{post.title}}</div>
+    <div>{{post.publishDate}}</div>
+    <markdown ngPreserveWhitespaces>
+      {{post.content}}
+    </markdown>
+    <div style="height: 2px; background-color: red"></div>
+  </div>
+</div>

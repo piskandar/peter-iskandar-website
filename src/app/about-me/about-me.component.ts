@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {workExperienceList1,workExperienceList2, WorkExperienceRole} from '../model/work-experience-role';
+import {workExperienceList1, workExperienceList2, WorkExperienceRole} from '../model/work-experience-role';
 
 @Component({
   selector: 'app-about-me',
