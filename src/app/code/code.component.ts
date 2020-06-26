@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {BlogPost, blogPosts} from '../model/blog-post';
+import {Component, OnInit} from '@angular/core';
+import {BlogPost} from '../model/blog-post';
+import {PiskandarService} from '../api/piskandar.service';
+import * as moment from 'moment'; // add this 1 of 4
 
 @Component({
   selector: 'app-code',
@@ -8,11 +10,21 @@ import {BlogPost, blogPosts} from '../model/blog-post';
 })
 export class CodeComponent implements OnInit {
 
-  posts: BlogPost[] = blogPosts;
+  posts: BlogPost[];
+  private momentInstance = moment();
 
-  constructor() { }
+  constructor(private piskandarService: PiskandarService) {
+
+  }
 
   ngOnInit() {
+    this.piskandarService.getPosts('Publish').subscribe(posts => {
+      this.posts = posts;
+    });
+  }
+
+  formatDate(date): string {
+    return
   }
 
 }

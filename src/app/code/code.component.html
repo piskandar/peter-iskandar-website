@@ -2,10 +2,10 @@
 
 <div style="width: 1024px; margin: 0 auto">
   <div *ngFor="let post of posts" >
-    <div>{{post.title}}</div>
-    <div>{{post.publishDate}}</div>
-    <markdown ngPreserveWhitespaces>
-      {{post.content}}
+    <div class="postTitle">{{post.postTitle}}</div>
+    <div class="postDate">{{post.postDate | date:'medium'}}</div>
+    <markdown lineNumbers class="content">
+      {{post.postContent}}
     </markdown>
     <div style="height: 2px; background-color: red"></div>
   </div>

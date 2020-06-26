@@ -12,7 +12,9 @@ import {HomeComponent} from './home/home.component';
 import {CodeComponent} from './code/code.component';
 import {MusicComponent} from './music/music.component';
 import {MarkdownModule} from 'ngx-markdown';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {PiskandarService} from './api/piskandar.service';
+import {PISKANDAR_API} from './api/piskandar-api';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,12 @@ import {HttpClient} from '@angular/common/http';
   imports: [
     BrowserModule,
     applicationRouterModule,
+    HttpClientModule,
     MarkdownModule.forRoot(),
   ],
   providers: [
+    PiskandarService,
+    {provide: PISKANDAR_API, useClass: HttpClient},
     {provide: LocationStrategy, useClass: PathLocationStrategy},
   ],
   bootstrap: [AppComponent]
