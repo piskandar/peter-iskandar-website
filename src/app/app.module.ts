@@ -15,6 +15,9 @@ import {MarkdownModule} from 'ngx-markdown';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {PiskandarService} from './api/piskandar.service';
 import {PISKANDAR_API} from './api/piskandar-api';
+import { PageControlComponent } from './page-control/page-control.component';
+import { PostComponent } from './post/post.component';
+import {PostResolverService} from './api/resolver/post-resolver.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import {PISKANDAR_API} from './api/piskandar-api';
     HeaderComponent,
     HomeComponent,
     CodeComponent,
-    MusicComponent
+    MusicComponent,
+    PageControlComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,7 @@ import {PISKANDAR_API} from './api/piskandar-api';
     PiskandarService,
     {provide: PISKANDAR_API, useClass: HttpClient},
     {provide: LocationStrategy, useClass: PathLocationStrategy},
+    PostResolverService
   ],
   bootstrap: [AppComponent]
 })

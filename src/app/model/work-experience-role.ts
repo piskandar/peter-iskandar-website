@@ -8,10 +8,15 @@ export class WorkExperienceRole {
 
 
 export const workExperienceList1 = [
+  createWorkExperience('MANAGER SOFTWARE ENGINEERING',
+    'Transformation Products',
+    'APRIL 2020',
+    'PRESENT',
+    []),
   createWorkExperience('SENIOR MANAGER SOFTWARE ENGINEERING',
     'Internal Products & Services',
     'AUGUST 2019',
-    'PRESENT',
+    'APRIL 2020',
     []),
   createWorkExperience('MANAGER SOFTWARE ENGINEERING',
     'Internal Products & Services',

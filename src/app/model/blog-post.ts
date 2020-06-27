@@ -1,3 +1,12 @@
+
+export class BlogPage {
+  data: BlogPost[];
+  pageNumber: number;
+  pageSize: number;
+  totalItems: number;
+  totalPages: number;
+}
+
 export class BlogPost {
   guid: string;
   id: number;

@@ -4,6 +4,8 @@ import {AboutMeComponent} from './about-me/about-me.component';
 import {HomeComponent} from './home/home.component';
 import {MusicComponent} from './music/music.component';
 import {CodeComponent} from './code/code.component';
+import {PostComponent} from './post/post.component';
+import {PostResolverService} from './api/resolver/post-resolver.service';
 
 const appRoutes = [
   {
@@ -26,6 +28,13 @@ const appRoutes = [
   {
     path: 'code',
     component: CodeComponent
+  },
+  {
+    path: 'code/:data/:slug',
+    component: PostComponent,
+    resolve: {
+      post: PostResolverService
+    }
   }
 ];
 
