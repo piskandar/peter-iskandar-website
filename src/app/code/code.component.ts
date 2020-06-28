@@ -27,7 +27,15 @@ export class CodeComponent implements OnInit {
     });
   }
 
-  formatDate(d: Date) {
-    return moment(d).format('yyyyMMDD');
+  formatYear(d: Date) {
+    return moment(d).format('yyyy');
+  }
+
+  formatMonth(d: Date) {
+    return moment(d).format('MM');
+  }
+
+  formatDay(d: Date) {
+    return moment(d).format('DD');
   }
 }

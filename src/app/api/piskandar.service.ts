@@ -14,7 +14,7 @@ export class PiskandarService {
     return this.http.get<BlogPage>(`/api/v1/posts?status=${status}&pageNumber=${pageNumber}&pageSize=${pageSize}`);
   }
 
-  getPost(date, slug): Observable<BlogPost> {
-    return this.http.get<BlogPost>(`/api/v1/posts/${date}/${slug}`);
+  getPost(year, month, day, slug): Observable<BlogPost> {
+    return this.http.get<BlogPost>(`/api/v1/posts/${year}/${month}/${day}/${slug}`);
   }
 }

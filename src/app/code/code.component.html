@@ -2,7 +2,7 @@
 
 <div style="width: 1024px; margin: 0 auto">
   <div *ngFor="let post of page.data" >
-    <div class="postTitle"><a [routerLink]="['/code',formatDate(post.postDate) ,post.postUrlSlug]">{{post.postTitle}}</a></div>
+    <div class="postTitle"><a [routerLink]="['/code',formatYear(post.postDate), formatMonth(post.postDate), formatDay(post.postDate) ,post.postUrlSlug]">{{post.postTitle}}</a></div>
     <div class="postDate">{{post.postDate | date:'medium'}}</div>
     <markdown lineNumbers class="content">
       {{post.postContent}}

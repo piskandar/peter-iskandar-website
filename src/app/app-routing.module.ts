@@ -30,7 +30,7 @@ const appRoutes = [
     component: CodeComponent
   },
   {
-    path: 'code/:data/:slug',
+    path: 'code/:year/:month/:day/:slug',
     component: PostComponent,
     resolve: {
       post: PostResolverService
