@@ -1,13 +1,26 @@
 <app-header [showCode]="false" [pageTitle]="'Code'"></app-header>
 
 <div style="width: 1024px; margin: 0 auto">
-  <div *ngFor="let post of page.data" >
-    <div class="postTitle"><a [routerLink]="['/code',formatYear(post.postDate), formatMonth(post.postDate), formatDay(post.postDate) ,post.postUrlSlug]">{{post.postTitle}}</a></div>
-    <div class="postDate">{{post.postDate | date:'medium'}}</div>
-    <markdown lineNumbers class="content">
-      {{post.postContent}}
-    </markdown>
-    <div style="height: 2px; background-color: red"></div>
+  <div *ngIf="loading">Loading...</div>
+
+  <div *ngIf="!loading">
+    <div *ngFor="let post of page.data">
+      <div class="postTitle">
+        <a [routerLink]="['/code',formatYear(post.postDate), formatMonth(post.postDate), formatDay(post.postDate) ,post.postUrlSlug]">{{post.postTitle}}</a>
+      </div>
+      <div class="postDate">{{post.postDate | date:'medium'}}</div>
+      <markdown lineNumbers class="content">
+        {{post.postContent}}
+      </markdown>
+      <div style="height: 2px; background-color: red"></div>
+    </div>
+    <app-page-control [currentPage]="pageNumber"
+                      [totalPages]="totalPages"
+                      *ngIf="!loading"
+                      [newerEnabled]="isNewerEnabled()"
+                      [olderEnabled]="isOlderEnabled()"
+                      (goToNewer)="goToNewerPage()"
+                      (goToOlder)="goToOlderPage()"
+                      (goToPage)="goToPage($event)"></app-page-control>
   </div>
-  <app-page-control [currentPage]="currentPageNumber" [totalPages]="totalPages"></app-page-control>
 </div>

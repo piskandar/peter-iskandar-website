@@ -1,3 +1,14 @@
-<ul>
-  <li *ngFor="let x of counter(totalPages); let i = index">page {{i + 1}}</li>
-</ul>
+<div class="page-control">
+
+
+  <div (click)="newer()" class="page-link">newer</div>
+  <div *ngFor="let i of counter(totalPages)"
+       (click)="page(i)"
+       class="page-link">
+
+    {{i}}
+  </div>
+
+
+  <div (click)="older()" class="page-link">older</div>
+</div>

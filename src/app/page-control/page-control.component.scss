@@ -1,0 +1,8 @@
+.page-control {
+  display: flex;
+  justify-content: space-between;
+
+  .page-link {
+    cursor: pointer;
+  }
+}
